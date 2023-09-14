@@ -169,6 +169,6 @@ class Register:
 
 
 if __name__=="__main__":
-    root=Tk()
-    app=Register(root)
-    root.mainloop()
+        root=Tk()
+        app=Register(root)
+        root.mainloop()

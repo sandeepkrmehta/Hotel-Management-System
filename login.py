@@ -1,8 +1,9 @@
-from tkinter import*
+from tkinter import* 
 from tkinter import ttk
 from PIL import Image,ImageTk #pip install pillow
 from tkinter import messagebox
 import mysql.connector
+from hms import HotelManagementSystem
 
 def main():
         win=Tk()
@@ -98,9 +99,11 @@ class Login_Window:
         if self.txtuser.get()=="" or self.txtpass.get()=="":
             messagebox.showerror("Error","all field required")
         elif self.txtuser.get()=="s@hm" and self.txtpass.get()=="123":
-            
-            obj=HotelManagementSystem(self)
-            
+            app=HotelManagementSystem(self.root)
+
+
+
+
         else:
             conn=mysql.connector.connect(host="localhost",user="root",password="Bansal@2021",database="hms")
             my_cursor=conn.cursor()
@@ -112,8 +115,8 @@ class Login_Window:
             else:
                 open_main=messagebox.askyesno("YesNo","Acess Only Admin")
                 if open_main>0:
-                    self.new_window=Toplevel(self.new_window)
-                    self.app=hms(self.new_window)  #=====================Hotel management system
+                    self.new_window=Toplevel(self.root)
+                    self.app=HotelManagementSystem(self.new_window)  #=====================Hotel management system
                 else:
                     if not open_main:
                         return

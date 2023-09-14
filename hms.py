@@ -43,7 +43,7 @@ class HotelManagementSystem:
         # ==================Botton frame=================
         btn_frame=Frame(main_frame,bd=4,relief=RIDGE)
         btn_frame.place(x=0,y=35,width=228,height=190)
-        
+
         cust_btn=Button(btn_frame,text="CUSTOMER",command=lambda:self.cust_details(),width=22,font=("times new roman",14,"bold"),bg="black",fg="gold",bd=0,cursor="hand1")
     
         cust_btn.grid(row=0,column=0,pady=1)
@@ -57,10 +57,10 @@ class HotelManagementSystem:
         report_btn=Button(btn_frame,text="REPORT",width=22,font=("times new roman",14,"bold"),bg="black",fg="gold",bd=0,cursor="hand1")
         report_btn.grid(row=3,column=0,pady=1)
 
-        logout_btn=Button(btn_frame,text="LOGOUT",width=22,font=("times new roman",14,"bold"),bg="black",fg="gold",bd=0,cursor="hand1")
+        logout_btn=Button(btn_frame,text="LOGOUT", command=lambda:self.logout(),width=22,font=("times new roman",14,"bold"),bg="black",fg="gold",bd=0,cursor="hand1")
         logout_btn.grid(row=4,column=0,pady=1)
 
-        
+
         #===========RIGHT SIDE IMAGE================
 
         img3=Image.open(r"E:\hms\hotel\slide3.jpg")
@@ -111,6 +111,11 @@ class HotelManagementSystem:
         self.app=DetailsRoom(Toplevel(self.root))
 
 
+    def logout(self):
+        self.root.destroy()
+        #self.new_window=Toplevel(self.root)
+        #self.app=Cust_Win(self.new_window)
+        # self.app=LOGOUT(Toplevel(self.root))
 
 
 

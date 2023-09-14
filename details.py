@@ -194,7 +194,7 @@ class DetailsRoom:
                 value=(self.var_floor.get(),)
                 my_cursor.execute(query,value)
         else:
-            if not mDelete:
+             if not mDelete:
                 return
         conn.commit()
         self.fetch_data()
