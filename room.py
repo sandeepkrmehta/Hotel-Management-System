@@ -270,7 +270,6 @@ class Roombooking:
                 my_cursor=conn.cursor()
                 my_cursor.execute("update room set check_in=%s,check_out=%s,roomtype=%s,roomavailable=%s,meal=%s,noOfdays=%s where Contact=%s",(
                 self.var_checkin.get(),self.var_checkout.get(),self.var_roomtype.get(),self.var_roomavailable.get(),self.var_meal.get(),self.var_noofdays.get(),self.var_contact.get()))
-
                 conn.commit()
                 self.fetch_data()
                 conn.close()
@@ -460,7 +459,7 @@ class Roombooking:
         self.var_noofdays.set(abs(outDate-inDate).days)
 
 
-        if (self.var_meal.get()=="BreakFast" and self.var_roomtype.get()=="laxary"):
+        if (self.var_meal.get()=="BreakFast" and self.var_roomtype.get()=="laxury"):
             q1=float(300)
             q2=float(700)
             q3=float(self.var_noofdays.get())
