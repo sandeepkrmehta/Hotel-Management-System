@@ -21,7 +21,7 @@ class Login_Window:
         self.root.geometry("1550x800+0+0")
 
 
-        self.bg=ImageTk.PhotoImage(file="E:\hms\hotel\SDT_Zoom-Backgrounds_April-8_Windansea-1-logo-1.jpg")
+        self.bg=ImageTk.PhotoImage(file="..\hms\hotel\SDT_Zoom-Backgrounds_April-8_Windansea-1-logo-1.jpg")
         lbl_bg=Label(self.root,image=self.bg)
         lbl_bg.place(x=0,y=0,relwidth=1,relheight=1)
 
@@ -29,8 +29,8 @@ class Login_Window:
         frame.place(x=610,y=170,width=340,height=450)
 
 
-        img1=Image.open(r"E:\hms\hotel\LoginIconAppl.png")
-        img1=img1.resize((100,100),Image.ANTIALIAS)
+        img1=Image.open(r"..\hms\hotel\LoginIconAppl.png")
+        img1=img1.resize((100,100),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
         lblimg1=Label(image=self.photoimg1,borderwidth=0,bg="black")
         lblimg1.place(x=730,y=175,width=100,height=100)
@@ -58,16 +58,16 @@ class Login_Window:
 
 
         # ==============ICON Image===============
-        img2=Image.open(r"E:\hms\hotel\LoginIconAppl.png")
-        img2=img2.resize((25,25),Image.ANTIALIAS)
+        img2=Image.open(r"..\hms\hotel\LoginIconAppl.png")
+        img2=img2.resize((25,25),Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
         lblimg1=Label(image=self.photoimg2,borderwidth=0,bg="black")
         lblimg1.place(x=650,y=323,width=25,height=25)       
 
 
         # ==============ICON Image===============
-        img3=Image.open(r"E:\hms\hotel\lock-512.png")
-        img3=img3.resize((25,25),Image.ANTIALIAS)
+        img3=Image.open(r"..\hms\hotel\lock-512.png")
+        img3=img3.resize((25,25),Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
         lblimg1=Label(image=self.photoimg2,borderwidth=0,bg="black")
         lblimg1.place(x=650,y=395,width=25,height=25)    
@@ -174,13 +174,13 @@ class Register:
 
 
 #======================Background Image=================
-        self.bg=ImageTk.PhotoImage(file=r"E:\hms\hotel\nature.jpg")
+        self.bg=ImageTk.PhotoImage(file=r"..\hms\hotel\nature.jpg")
         bg_lbl=Label(self.root,image=self.bg)
         bg_lbl.place(x=0,y=0,relwidth=1,relheight=1)
 
 # =====================Left Image=================
 
-        self.bg1=ImageTk.PhotoImage(file=r"E:\hms\hotel\LoveSove.jpg")
+        self.bg1=ImageTk.PhotoImage(file=r"..\hms\hotel\LoveSove.jpg")
         bg_lbl=Label(self.root,image=self.bg1)
         bg_lbl.place(x=50,y=100,width=470,height=550)
 
@@ -266,15 +266,15 @@ class Register:
 
 
 # =================Button============
-        img=Image.open(r"E:\hms\hotel\register-now-button1.jpg")
-        img=img.resize((200,55),Image.ANTIALIAS)     #ANTILIASED HIGH TO CONVERT LOW AND LOW TO HIGH IMAGE
+        img=Image.open(r"..\hms\hotel\register-now-button1.jpg")
+        img=img.resize((200,55),Image.LANCZOS)     #ANTILIASED HIGH TO CONVERT LOW AND LOW TO HIGH IMAGE
         self.photoimage=ImageTk.PhotoImage(img)
         b1=Button(frame,image=self.photoimage,command=self.register_data,font=("times new roman",15,"bold"),borderwidth=0,cursor="hand2")
         b1.place(x=10,y=420,width=200)
 
 
-        img1=Image.open(r"E:\hms\hotel\loginpng.png")
-        img1=img1.resize((200,45),Image.ANTIALIAS)    
+        img1=Image.open(r"..\hms\hotel\loginpng.png")
+        img1=img1.resize((200,45),Image.LANCZOS)    
         self.photoimage1=ImageTk.PhotoImage(img1)
         b1=Button(frame,image=self.photoimage1,font=("times new roman",15,"bold"),borderwidth=0,cursor="hand2")
         b1.place(x=330,y=420,width=200)
@@ -305,10 +305,6 @@ class Register:
             conn.commit()
             conn.close()
             messagebox.showinfo("success","Register Sucessfully")
-
-
-
-
 
 
 

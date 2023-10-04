@@ -20,7 +20,7 @@ class DetailsRoom:
 
 
         # =============LOGO=====================
-        img2=Image.open(r"E:\hms\hotel\logohotel.png")
+        img2=Image.open(r"..\hms\hotel\logohotel.png")
         img2=img2.resize((100,40),Image.ANTIALIAS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -207,16 +207,6 @@ class DetailsRoom:
         self.var_floor.set(""),
         self.var_roomNo.set(""),
         self.var_RoomType.set("")
-
-
-
-
-
-
-
-
-
-
 
 
 

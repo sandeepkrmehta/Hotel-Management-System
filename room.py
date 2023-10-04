@@ -14,7 +14,6 @@ class Roombooking:
         self.root.geometry("1295x550+230+220")
 
 
-
         # ==========Variable==========
         self.var_contact=StringVar()
         self.var_checkin=StringVar()
@@ -35,7 +34,7 @@ class Roombooking:
 
 
         # =============LOGO=====================
-        img2=Image.open(r"E:\hms\hotel\logohotel.png")
+        img2=Image.open(r"..\hms\hotel\logohotel.png")
         img2=img2.resize((100,40),Image.ANTIALIAS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -164,14 +163,12 @@ class Roombooking:
 
         # =============RIght side image==========
 
-        img3=Image.open(r"E:\hms\hotel\bed.jpg")
+        img3=Image.open(r"..\hms\hotel\bed.jpg")
         img3=img3.resize((520,300),Image.ANTIALIAS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
         lblimg=Label(self.root,image=self.photoimg3,bd=0,relief=RIDGE)
         lblimg.place(x=760,y=55,width=520,height=300)
-
-
 
 
         #=======================Table Frame Search system=========================
@@ -411,10 +408,8 @@ class Roombooking:
             Value=(self.var_contact.get(),)
             my_cursor.execute(query,Value)
             row=my_cursor.fetchone()
-
             lblemail=Label(showDataframe,text="Email:",font=("arial",12,"bold"))
             lblemail.place(x=0,y=60)
-
             lbl3=Label(showDataframe,text=row,font=("arial",12,"bold"))
             lbl3.place(x=90,y=60)
 
